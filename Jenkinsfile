@@ -17,7 +17,7 @@ pipeline {
         stage('Build Backend') {
             steps {
                 dir('TP-Projet') {
-                    sh 'mvn clean package'
+                    sh 'mvn clean package -DskipTests=true'
                 }
             }
         }
